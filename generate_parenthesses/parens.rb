@@ -1,9 +1,3 @@
-# use recursion backtracking
-# if left parens and right parens = 0 return the created parens string
-# start with n number of left parens and n number of right parens
-# add left paren to the string if right parens num = left parens num
-# if left parens num < right parens num add right parens to the string or left parens if it's bigger than 1
-#check tommorow on the internet what is recursion backtracking
 def parens(n, left = Array.new(n, "("), right = Array.new(n, ")"), string = '', ary = [])
   return '' if n <= 0
   
