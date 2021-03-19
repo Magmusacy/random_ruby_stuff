@@ -24,7 +24,9 @@ module Displayable
   end
 
   def card_presentation(state)
-    return state == :hide_first ? [hide_dealer_card(cards), :yellow, show_hidden_total] : [cards, :yellow, total] if self.is_a?(Dealer)
+    if is_a?(Dealer)
+      return state == :hide_first ? [hide_dealer_card(cards), :yellow, show_hidden_total] : [cards, :yellow, total]
+    end
 
     [cards, :blue, total]
   end
